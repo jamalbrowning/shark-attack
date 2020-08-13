@@ -6,12 +6,14 @@ import './App.scss';
 
 class App extends React.Component {
   state = {
-    students: [],
+    lvingStudents: [],
+    deadStudents: [],
   }
 
   componentDidMount() {
-    const students = studentData.getStudents();
-    this.setState({ students });
+    const livingStudents = studentData.livingStudents();
+    const deadStudents = studentData.dearlyBeloved();
+    this.setState({ livingStudents, deadStudents });
   }
 
   render() {
