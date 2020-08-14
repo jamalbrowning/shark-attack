@@ -123,7 +123,7 @@ const students = [
     id: 21,
     firstName: 'William',
     lastName: 'Campbell',
-    isDead: false,
+    isDead: true,
   },
 ];
 
