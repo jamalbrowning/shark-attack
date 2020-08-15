@@ -29,7 +29,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Tank</h1>
         <SharkTank livingStudents={this.state.livingStudents} followTheLight={this.followTheLight} />
         <Graveyard deadStudents={this.state.deadStudents}/>
       </div>
