@@ -10,6 +10,13 @@ import studentShape from '../../helpers/props/studentShape';
 class SharkTank extends React.Component {
   static propType = {
     livingStudents: Proptypes.arrayOf(studentShape.studentShape),
+    followTheLight: Proptypes.func,
+  }
+
+  followTheLightEvent = (e) => {
+    e.preventDefault();
+    const { followTheLight } = this.props;
+    followTheLight();
   }
 
   render() {
@@ -22,7 +29,7 @@ class SharkTank extends React.Component {
     return (
       <div className="the-tank">
         <h2>The Shark Tank</h2>
-        <button className="btn btn-info">Shark Attack</button>
+        <button className="btn btn-info" onClick={this.followTheLightEvent}>Shark Attack</button>
         <div className="card-columns">
         { livingStudentCards }
         </div>

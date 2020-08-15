@@ -133,12 +133,10 @@ const livingStudents = () => students.filter((student) => !student.isDead);
 
 const dearlyBeloved = () => students.filter((student) => student.isDead);
 
-const followTheLight = (studentId) => {
-  students.forEach((response) => {
-    if (response.id === studentId) {
-      response.isDead = true;
-    }
-  });
+const followTheLight = () => {
+  const livingStudentsbyId = livingStudents().map((student) => student.id);
+  const randomStudentPick = Math.floor(Math.random() * (livingStudentsbyId.length));
+  students.find((student) => student.id === livingStudentsbyId[randomStudentPick]).isDead = true;
 };
 
 export default {
