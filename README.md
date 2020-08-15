@@ -12,4 +12,7 @@ The object of this class exercise, is to have two div's that represent a shark t
 - Sass
 
 ### How to run
-- go to 
+- go to https://github.com/jamalbrowning/shark-attack clone down code
+- cd into folder
+- npm start
+
